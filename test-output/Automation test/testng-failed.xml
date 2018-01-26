@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Automation test]">
+  <test name="Regression test(failed)">
+    <classes>
+      <class name="IKEAProject.HomePageTest">
+        <methods>
+          <include name="homePageNavigationTest"/>
+          <include name="Initilize"/>
+        </methods>
+      </class> <!-- IKEAProject.HomePageTest -->
+      <class name="IKEAProject.SingaporePageTest">
+        <methods>
+          <include name="Initialize"/>
+          <include name="validateCountry"/>
+        </methods>
+      </class> <!-- IKEAProject.SingaporePageTest -->
+      <class name="IKEAProject.CotsPageTest">
+        <methods>
+          <include name="validateCotsPage"/>
+          <include name="Initialize"/>
+        </methods>
+      </class> <!-- IKEAProject.CotsPageTest -->
+      <class name="IKEAProject.CotWithDrawersTest">
+        <methods>
+          <include name="validateCotWithDrawersPage"/>
+          <include name="Initialize"/>
+        </methods>
+      </class> <!-- IKEAProject.CotWithDrawersTest -->
+      <class name="IKEAProject.CheckoutPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="validateCotWithDrawersPage"/>
+          <include name="Initialize"/>
+        </methods>
+      </class> <!-- IKEAProject.CheckoutPageTest -->
+      <class name="IKEAProject.ShoppingCartPageTest">
+        <methods>
+          <include name="validateCotWithDrawersPage"/>
+          <include name="Initialize"/>
+        </methods>
+      </class> <!-- IKEAProject.ShoppingCartPageTest -->
+    </classes>
+  </test> <!-- Regression test(failed) -->
+</suite> <!-- Failed suite [Automation test] -->

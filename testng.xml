@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test1">
+    <classes>
+      <class name="IKEAProject.HomePageTest"/>
+      </classes>
+      </test>
+      
+        <test name="Test2">
+        <classes>
+      <class name="IKEAProject.SingaporePageTest"/>
+      </classes>
+       </test>
+       
+       <test name="Test3">
+         <classes>
+      <class name="IKEAProject.CotsPageTest"/>
+      </classes>
+       </test>
+       
+         <test name="Test4">
+         <classes>
+      <class name="IKEAProject.CotWithDrawersTest"/>
+      </classes>
+       </test>
+       
+        <test name="Test5">
+         <classes>
+      <class name="IKEAProject.ShoppingCartPageTest"/>
+      </classes>
+      </test>
+      
+      
+       
+        <test name="Test6">
+         <classes>
+      <class name="IKEAProject.CheckoutPageTest"/>
+      </classes>
+       </test>
+       
+        
+       
+        <test name="Test7">
+         <classes>
+      <class name="IKEAProject.AppTest"/>
+      </classes>
+       </test> <!-- Test -->
+</suite> <!-- Suite -->

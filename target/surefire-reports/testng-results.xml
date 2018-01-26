@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="537052" started-at="2018-01-23T05:02:41Z" finished-at="2018-01-23T05:11:38Z">
+    <groups>
+    </groups>
+    <test name="Test1" duration-ms="9169" started-at="2018-01-23T05:02:41Z" finished-at="2018-01-23T05:02:50Z">
+      <class name="IKEAProject.HomePageTest">
+        <test-method status="PASS" signature="Initilize()[pri:0, instance:IKEAProject.HomePageTest@1d176f7]" name="Initilize" is-config="true" duration-ms="6358" started-at="2018-01-23T06:02:41Z" finished-at="2018-01-23T06:02:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initilize -->
+        <test-method status="PASS" signature="homePageNavigationTest()[pri:0, instance:IKEAProject.HomePageTest@1d176f7]" name="homePageNavigationTest" duration-ms="626" started-at="2018-01-23T06:02:47Z" finished-at="2018-01-23T06:02:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageNavigationTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:IKEAProject.HomePageTest@1d176f7]" name="teardown" is-config="true" duration-ms="2137" started-at="2018-01-23T06:02:48Z" finished-at="2018-01-23T06:02:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- IKEAProject.HomePageTest -->
+    </test> <!-- Test1 -->
+    <test name="Test2" duration-ms="58662" started-at="2018-01-23T05:02:50Z" finished-at="2018-01-23T05:03:49Z">
+      <class name="IKEAProject.SingaporePageTest">
+        <test-method status="PASS" signature="Initialize()[pri:0, instance:IKEAProject.SingaporePageTest@707e36]" name="Initialize" is-config="true" duration-ms="5449" started-at="2018-01-23T06:02:50Z" finished-at="2018-01-23T06:02:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method status="PASS" signature="validateCountry()[pri:0, instance:IKEAProject.SingaporePageTest@707e36]" name="validateCountry" duration-ms="50888" started-at="2018-01-23T06:02:56Z" finished-at="2018-01-23T06:03:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCountry -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:IKEAProject.SingaporePageTest@707e36]" name="teardown" is-config="true" duration-ms="2324" started-at="2018-01-23T06:03:47Z" finished-at="2018-01-23T06:03:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- IKEAProject.SingaporePageTest -->
+    </test> <!-- Test2 -->
+    <test name="Test3" duration-ms="76401" started-at="2018-01-23T05:03:49Z" finished-at="2018-01-23T05:05:05Z">
+      <class name="IKEAProject.CotsPageTest">
+        <test-method status="PASS" signature="Initialize()[pri:0, instance:IKEAProject.CotsPageTest@1d7a715]" name="Initialize" is-config="true" duration-ms="5621" started-at="2018-01-23T06:03:49Z" finished-at="2018-01-23T06:03:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method status="PASS" signature="validateCotsPage()[pri:0, instance:IKEAProject.CotsPageTest@1d7a715]" name="validateCotsPage" duration-ms="68444" started-at="2018-01-23T06:03:55Z" finished-at="2018-01-23T06:05:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCotsPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:IKEAProject.CotsPageTest@1d7a715]" name="tearDown" is-config="true" duration-ms="2336" started-at="2018-01-23T06:05:03Z" finished-at="2018-01-23T06:05:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- IKEAProject.CotsPageTest -->
+    </test> <!-- Test3 -->
+    <test name="Test4" duration-ms="115863" started-at="2018-01-23T05:05:05Z" finished-at="2018-01-23T05:07:01Z">
+      <class name="IKEAProject.CotWithDrawersTest">
+        <test-method status="PASS" signature="Initialize()[pri:0, instance:IKEAProject.CotWithDrawersTest@16eabae]" name="Initialize" is-config="true" duration-ms="5432" started-at="2018-01-23T06:05:05Z" finished-at="2018-01-23T06:05:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method status="PASS" signature="validateCotWithDrawersPage()[pri:0, instance:IKEAProject.CotWithDrawersTest@16eabae]" name="validateCotWithDrawersPage" duration-ms="108214" started-at="2018-01-23T06:05:11Z" finished-at="2018-01-23T06:06:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCotWithDrawersPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:IKEAProject.CotWithDrawersTest@16eabae]" name="tearDown" is-config="true" duration-ms="2215" started-at="2018-01-23T06:06:59Z" finished-at="2018-01-23T06:07:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- IKEAProject.CotWithDrawersTest -->
+    </test> <!-- Test4 -->
+    <test name="Test5" duration-ms="126963" started-at="2018-01-23T05:07:01Z" finished-at="2018-01-23T05:09:08Z">
+      <class name="IKEAProject.ShoppingCartPageTest">
+        <test-method status="PASS" signature="Initialize()[pri:0, instance:IKEAProject.ShoppingCartPageTest@aac163]" name="Initialize" is-config="true" duration-ms="5493" started-at="2018-01-23T06:07:01Z" finished-at="2018-01-23T06:07:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method status="PASS" signature="validateCotWithDrawersPage()[pri:0, instance:IKEAProject.ShoppingCartPageTest@aac163]" name="validateCotWithDrawersPage" duration-ms="119333" started-at="2018-01-23T06:07:07Z" finished-at="2018-01-23T06:09:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCotWithDrawersPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:IKEAProject.ShoppingCartPageTest@aac163]" name="tearDown" is-config="true" duration-ms="2136" started-at="2018-01-23T06:09:06Z" finished-at="2018-01-23T06:09:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- IKEAProject.ShoppingCartPageTest -->
+    </test> <!-- Test5 -->
+    <test name="Test6" duration-ms="149854" started-at="2018-01-23T05:09:08Z" finished-at="2018-01-23T05:11:38Z">
+      <class name="IKEAProject.CheckoutPageTest">
+        <test-method status="PASS" signature="Initialize()[pri:0, instance:IKEAProject.CheckoutPageTest@1282abb]" name="Initialize" is-config="true" duration-ms="5701" started-at="2018-01-23T06:09:08Z" finished-at="2018-01-23T06:09:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method status="PASS" signature="validateCotWithDrawersPage()[pri:0, instance:IKEAProject.CheckoutPageTest@1282abb]" name="validateCotWithDrawersPage" duration-ms="141778" started-at="2018-01-23T06:09:14Z" finished-at="2018-01-23T06:11:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCotWithDrawersPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:IKEAProject.CheckoutPageTest@1282abb]" name="tearDown" is-config="true" duration-ms="2373" started-at="2018-01-23T06:11:36Z" finished-at="2018-01-23T06:11:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- IKEAProject.CheckoutPageTest -->
+    </test> <!-- Test6 -->
+    <test name="Test7" duration-ms="1" started-at="2018-01-23T05:11:38Z" finished-at="2018-01-23T05:11:38Z">
+    </test> <!-- Test7 -->
+  </suite> <!-- Suite -->
+</testng-results>

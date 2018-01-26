@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="83212" started-at="2018-01-23T04:54:01Z" finished-at="2018-01-23T04:55:24Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="83212" started-at="2018-01-23T04:54:01Z" finished-at="2018-01-23T04:55:24Z">
+      <class name="IKEAProject.CotsPageTest">
+        <test-method status="PASS" signature="Initialize()[pri:0, instance:IKEAProject.CotsPageTest@a7b76d]" name="Initialize" is-config="true" duration-ms="7582" started-at="2018-01-23T05:54:01Z" finished-at="2018-01-23T05:54:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method status="PASS" signature="validateCotsPage()[pri:0, instance:IKEAProject.CotsPageTest@a7b76d]" name="validateCotsPage" duration-ms="73145" started-at="2018-01-23T05:54:08Z" finished-at="2018-01-23T05:55:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCotsPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:IKEAProject.CotsPageTest@a7b76d]" name="tearDown" is-config="true" duration-ms="2421" started-at="2018-01-23T05:55:21Z" finished-at="2018-01-23T05:55:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- IKEAProject.CotsPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
