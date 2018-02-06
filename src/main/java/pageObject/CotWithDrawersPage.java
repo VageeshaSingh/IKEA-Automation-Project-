@@ -13,9 +13,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CotWithDrawersPage {
-	
+
 	private static WebDriver driver;
-	
+
 	By txtTestBox = By.id("popupAddToCartS79230116");
 	String bgc = "background-color";
 	By quantInputBox = By.id("quantity");
@@ -27,66 +27,80 @@ public class CotWithDrawersPage {
 	By storeList = By.xpath(".//*[@id='selectionDropDownList']/li[3]/span");
 	By storeListTest = By.xpath(".//*[@id='checkProductText']/div[1]/span[2]/a");
 	By cartIcon = By.xpath(".//*[@id='cart-icon']");
-	
-	public  CotWithDrawersPage(WebDriver driver){
-		this.driver  =driver;
+
+	public CotWithDrawersPage(WebDriver driver) {
+		this.driver = driver;
 	}
-	
-	public String getTitleOfPage(){
+
+	/* get the title of page */
+	public String getTitleOfPage() {
 		return driver.getTitle();
 	}
-	public void validateBackgroundColourOfBuyOnlineTextdBoxBeforeMouseHower(){
+
+	/* validate background colour of text box */
+	public void validateBackgroundColourOfBuyOnlineTextdBoxBeforeMouseHower() {
 		WebElement txtTest = driver.findElement(txtTestBox);
 		String colourBeforeMouseHower = txtTest.getCssValue(bgc);
 		System.out.println(colourBeforeMouseHower);
-		
+
 	}
-	public void enterQuantityInInputBox(){
+
+	/* validate the input field box */
+	public void enterQuantityInInputBox() {
 		driver.findElement(quantInputBox).clear();
 		driver.findElement(quantInputBox).sendKeys("3");
 	}
-	public void clickOnBuyOnlineLink() throws InterruptedException{
+
+	/* click on buy online link */
+	public void clickOnBuyOnlineLink() throws InterruptedException {
 		driver.findElement(buyableOnlineButton).click();
 		Thread.sleep(3000);
 	}
-	public void validateProductAddedInShppingCart() throws InterruptedException{
+
+	/* validate that item succesfully added in cart */
+	public void validateProductAddedInShppingCart() throws InterruptedException {
 		clickOnBuyOnlineLink();
-		/*Set <String> ids = driver.getWindowHandles();
-		Iterator<String> it = ids.iterator();
-		String parentWindow = it.next();
-		String childWindow = it.next();
-		driver.switchTo().window(childWindow);*/
+		/*
+		 * Set <String> ids = driver.getWindowHandles(); Iterator<String> it =
+		 * ids.iterator(); String parentWindow = it.next(); String childWindow =
+		 * it.next(); driver.switchTo().window(childWindow);
+		 */
 		WebElement cart = driver.findElement(cartWindow);
 		cart.findElement(addProdLink).click();
 		String countOfItemsInCart = navigateToShoppingCartWindow();
 		System.out.println(countOfItemsInCart);
 		driver.navigate().back();
 		Thread.sleep(5000);
-		
-		
-		
+
 	}
-	public String navigateToShoppingCartWindow(){
+
+	/* get the count of items added in cart */
+	public String navigateToShoppingCartWindow() {
 		String countOfItemsInCart = driver.findElement(itemCount).getText();
 		return countOfItemsInCart;
 	}
-public void validateProductAvailabilityInStore() throws InterruptedException{
-	
-	Thread.sleep(5000);
-	JavascriptExecutor jse = (JavascriptExecutor)driver;
-	jse.executeScript("scroll(0, 250)");
-	 driver.findElement(storeDisplayWindow).click();
-	 WebDriverWait wait = new WebDriverWait(driver,5);
-	wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(storeList));
-	driver.findElement(storeList).click();
-	Thread.sleep(4000);
-	System.out.println(driver.findElement(storeListTest).getText());
-	
-	
-}
-public void clickOnCartIcon(){
-	driver.findElement(cartIcon).click();
-	
 
-}
+	/* validate item availability in store selected */
+	public void validateProductAvailabilityInStore() throws InterruptedException {
+
+		Thread.sleep(5000);
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("scroll(0, 250)");
+		driver.findElement(storeDisplayWindow).click();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(storeList));
+		driver.findElement(storeList).click();
+		Thread.sleep(4000);
+		System.out.println(driver.findElement(storeListTest).getText());
+
+	}
+
+	/*
+	 * validate if user is able to go to shopping cart page by clicking on cart
+	 * icon
+	 */
+	public void clickOnCartIcon() {
+		driver.findElement(cartIcon).click();
+
+	}
 }

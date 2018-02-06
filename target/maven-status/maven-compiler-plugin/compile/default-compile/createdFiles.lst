@@ -1,0 +1,8 @@
+pageObject\ShoppingCartPage.class
+baseFiles\BrowserInvoke.class
+pageObject\CotsPage.class
+IKEAProject\App.class
+pageObject\CotWithDrawersPage.class
+pageObject\CheckoutPage.class
+pageObject\SingaporePage.class
+pageObject\HomePage.class

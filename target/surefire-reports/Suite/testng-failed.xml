@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="-1" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
-  <test verbose="0" name="Test4(failed)">
+  <test verbose="0" name="validate cotWithDrawersPage(failed)">
     <classes>
       <class name="IKEAProject.CotWithDrawersTest">
         <methods>
@@ -11,27 +11,16 @@
         </methods>
       </class> <!-- IKEAProject.CotWithDrawersTest -->
     </classes>
-  </test> <!-- Test4(failed) -->
-  <test verbose="0" name="Test5(failed)">
+  </test> <!-- validate cotWithDrawersPage(failed) -->
+  <test verbose="0" name="validate shoppingCartPage(failed)">
     <classes>
-      <class name="IKEAProject.CheckoutPageTest">
+      <class name="IKEAProject.ShoppingCartPageTest">
         <methods>
-          <include name="tearDown"/>
           <include name="validateCotWithDrawersPage"/>
-          <include name="Initialize"/>
-        </methods>
-      </class> <!-- IKEAProject.CheckoutPageTest -->
-    </classes>
-  </test> <!-- Test5(failed) -->
-  <test verbose="0" name="Test6(failed)">
-    <classes>
-      <class name="IKEAProject.CotsPageTest">
-        <methods>
           <include name="tearDown"/>
-          <include name="validateCotsPage"/>
           <include name="Initialize"/>
         </methods>
-      </class> <!-- IKEAProject.CotsPageTest -->
+      </class> <!-- IKEAProject.ShoppingCartPageTest -->
     </classes>
-  </test> <!-- Test6(failed) -->
+  </test> <!-- validate shoppingCartPage(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -2,7 +2,6 @@ package pageObject;
 
 import java.io.IOException;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,11 +13,11 @@ import baseFiles.BrowserInvoke;
 import junit.framework.Assert;
 import pageObject.SingaporePage;
 
-public class HomePage {
+public class HomePage extends BasePage {
 
 	public WebDriver driver;
 
-	By GoToLoc = By.xpath("html/body/section/div/div[3]/div[2]/a[2]");
+	String GoToLoc = "html/body/section/div/div[3]/div[2]/a[2]";
 
 	public HomePage(WebDriver driver) {
 
@@ -26,13 +25,25 @@ public class HomePage {
 	}
 
 	public void homePageNavigation() throws InterruptedException {
-/* click on the chose location link*/
-		driver.findElement(GoToLoc).click();
+		
+		/* click on the chose location link */
+		
+		WebElement w = helper.findElemetByXpath(GoToLoc);
+		w.click();
 	}
 
 	public String getLinkText() {
-		/* get and return the text of chosing location link */
-		return driver.findElement(GoToLoc).getText();
+		
+		/* get and return the text of choosing location link */
+		
+		return helper.findElemetByXpath(GoToLoc).getText();
+		
 	}
-
+	
+	public void isValid(){
+	}
+	
 }
+
+
+

@@ -2,7 +2,6 @@ package pageObject;
 
 import static org.testng.Assert.assertEquals;
 
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -13,15 +12,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-public class SingaporePage {
+public class SingaporePage extends BasePage{
 	private static WebDriver driver;
-	
 
-	By region = By.linkText("Singapore");
-	By headerpath = By.className("new-mainmenus");
-	By headermenupath = By.xpath(".//*[@id='mainPadding']/div[3]/div/div[2]/div[1]/ul[2]");
-	By productRanges = By.xpath(".//*[@id='subdropdown-products']/li/a[1]");
-	By productRanges1 = By.xpath(".//*[@id='subdropdown-products']/li[1]/a[1]");
+	String region = "Singapore";
+	String headerpath = "new-mainmenus";
+	String headermenupath = ".//*[@id='mainPadding']/div[3]/div/div[2]/div[1]/ul[2]";
+	String productRanges = ".//*[@id='subdropdown-products']/li/a[1]";
+	String productRanges1 = ".//*[@id='subdropdown-products']/li[1]/a[1]";
+	/*
 	By productRanges2 = By.xpath(".//*[@id='subdropdown-products']/li[2]/a[1]");
 	By productRanges3 = By.xpath(".//*[@id='subdropdown-products']/li[3]/a[1]");
 	By productRanges4 = By.xpath(".//*[@id='subdropdown-products']/li[4]/a[1]");
@@ -45,16 +44,18 @@ public class SingaporePage {
 	By productRanges22 = By.xpath(".//*[@id='subdropdown-products']/li[22]/a[1]");
 	By productRanges23 = By.xpath(".//*[@id='subdropdown-products']/li[23]/a[1]");
 	By productRanges24 = By.xpath(".//*[@id='subdropdown-products']/li[24]/a[1]");
-	By babySubProduct = By.xpath("//*[@id='subdropdown-products']/li[1]/div/div[1]");
-	By babySubProductProduct1 = By.xpath("(//span[@class='white_label'])[position()=1]");
-	By babySubProductProduct1Name = By.xpath("//*[@id='subdropdown-products']/li[1]/div/div[1]/div[1]/a[1]");
+	*/
+	String babySubProduct = "//*[@id='subdropdown-products']/li[1]/div/div[1]";
+	String  babySubProductProduct1 = "(//span[@class='white_label'])[position()=1]";
+	String babySubProductProduct1Name = "//*[@id='subdropdown-products']/li[1]/div/div[1]/div[1]/a[1]";
 
 	public SingaporePage(WebDriver driver) {
 		this.driver = driver;
 	}
 
+	/* click on the country */
 	public void selectCountry() {
-		driver.findElement(region).click();
+		helper.findElementByLinktext(region).click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -63,6 +64,7 @@ public class SingaporePage {
 
 	}
 
+	/* verify the title of page */
 	public boolean verifySingaporePageTitle() {
 
 		String expectedpagetitle = "Affordable Furniture and Home Furnishing – IKEA Singapore - IKEA";
@@ -75,40 +77,43 @@ public class SingaporePage {
 		return title;
 	}
 
-	public  void verifyNumberOfMenusOnMenuBar() {
+	/* verify the different type of products available on the page */
 
-		WebElement headerMenu = driver.findElement(headermenupath);
+	public void verifyNumberOfMenusOnMenuBar() {
+
+		WebElement headerMenu = helper.findElemetByXpath(headermenupath);
 		int count = headerMenu.findElements(By.tagName("a")).size();
 		System.out.println(count);
 		for (int i = 0; i < count; i++) {
-			String text =headerMenu.findElements(By.tagName("a")).get(i).getText();
+			String text = headerMenu.findElements(By.tagName("a")).get(i).getText();
 			System.out.println(text);
 
 			if (text.contains("PRODUCTS")) {
-				  headerMenu.findElements(By.tagName("a")).get(i).click();
-				 break;
-				
-				
-			}
-			}
+				headerMenu.findElements(By.tagName("a")).get(i).click();
+				break;
 
-			
+			}
+		}
+
 	}
+	/* validate the count of sub products under products */
 
-	
-	public void validateProductRangeUnderProducMenuBar(){
+	public void validateProductRangeUnderProducMenuBar() {
 		verifyNumberOfMenusOnMenuBar();
-		int actualCount=driver.findElements(productRanges).size();
+		int actualCount = helper.findElemetsByXpath(productRanges).size();
 		System.out.println(actualCount);
 		int expectedCount = 24;
 		Assert.assertEquals(actualCount, expectedCount);
-		
+
 		List<String> all_element_text = new ArrayList<String>();
-		for(int i=0;i<actualCount;i++){
-			switch(i){
+		for (int i = 0; i < actualCount; i++) {
+			
+			
+			all_element_text.add(helper.findElemetsByXpath(productRanges).get(i).getText());
+			/*switch (i) {
 			case 0:
-			all_element_text.add(driver.findElement(productRanges1).getText());
-			break;
+				all_element_text.add(driver.findElement(productRanges1).getText());
+				break;
 			case 1:
 				all_element_text.add(driver.findElement(productRanges2).getText());
 				break;
@@ -177,28 +182,34 @@ public class SingaporePage {
 				break;
 			case 23:
 				all_element_text.add(driver.findElement(productRanges24).getText());
-				
+
 				break;
 			}
-				
-			}
+			*/
+
+		}
 		System.out.println(all_element_text);
-		
+
 	}
-	
-	public void validateSubProductsOfBabyProducts() throws InterruptedException{
+	/* find and click on the sub products of the page */
+
+	public void validateSubProductsOfBabyProducts() throws InterruptedException {
 		verifyNumberOfMenusOnMenuBar();
-		driver.findElement(productRanges1).click();
+		helper.findElemetByXpath(productRanges1).click();
 		Thread.sleep(5000);
-		WebElement bsp = driver.findElement(babySubProduct);
+		WebElement bsp = helper.findElemetByXpath(babySubProduct);
 		int actualCount = bsp.findElements(By.tagName("a")).size();
 		System.out.println(actualCount);
-		String babySubProductName = driver.findElement(babySubProductProduct1).getText();
-		if(babySubProductName.equalsIgnoreCase("Cots")){
-			driver.findElement(babySubProductProduct1Name).click();
-			}
+		String babySubProductName = helper.findElementByClassName(babySubProductProduct1).getText();
+		if (babySubProductName.equalsIgnoreCase("Cots")) {
+			helper.findElemetByXpath(babySubProductProduct1Name).click();
+		}
 	}
 
-	
+	@Override
+	public void isValid() {
+		// TODO Auto-generated method stub
+		
 	}
 
+}

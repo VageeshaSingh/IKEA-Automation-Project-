@@ -13,6 +13,9 @@ import pageObject.HomePage;
 import pageObject.SingaporePage;
 
 public class SingaporePageTest extends BrowserInvoke {
+	
+	HomePage hp = new HomePage(driver);
+	SingaporePage sp = new SingaporePage(driver);
 
 	@BeforeTest
 	public void Initialize() throws IOException {
@@ -24,10 +27,8 @@ public class SingaporePageTest extends BrowserInvoke {
 
 	@Test
 	public void validateCountry() throws InterruptedException {
-
-		HomePage hp = new HomePage(driver);
+		
 		hp.homePageNavigation();
-		SingaporePage sp = new SingaporePage(driver);
 		Thread.sleep(5000);
 		sp.selectCountry();
 		boolean pageTitle = sp.verifySingaporePageTitle();

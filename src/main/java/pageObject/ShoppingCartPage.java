@@ -13,11 +13,11 @@ public class ShoppingCartPage {
 	public ShoppingCartPage(WebDriver driver){
 		this.driver=driver;
 	}
-	
+	/* verify the title of page */
 	public String validateTitleOfPage(){
 		return driver.getTitle();
 	}
-	
+	/* click on check out button to navigate to check out page */
 	public void clickOnCheckoutButton(){
 		driver.findElement(checkoutButton).click();
 	}
